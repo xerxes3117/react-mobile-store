@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ProductProvider } from './context';
 import * as serviceWorker from './serviceWorker';
 
 //To use our routes in whole application we need to wrap our 
 //App component inside Router component(i.e. BrowserRouter)
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>, document.getElementById('root')
+    <ProductProvider>
+        <Router>
+            <App />
+        </Router>
+    </ProductProvider>, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
