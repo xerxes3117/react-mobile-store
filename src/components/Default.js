@@ -12,7 +12,7 @@ class Default extends Component {
                         <h3>
                             the requested URL
                             <span className="text-danger"> {this.props.location.pathname} </span>
-                            is not found
+                            was not found
                         </h3>
                     </div>
                 </div>
