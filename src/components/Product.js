@@ -20,7 +20,10 @@ class Product extends Component {
                                 </Link>
                                 <button className="cart-btn"
                                     disabled={inCart ? true : false}
-                                    onClick={() => value.addToCart(id)}>
+                                    onClick={() => {
+                                        value.addToCart(id);
+                                        value.openModal(id);
+                                    }}>
                                     {inCart ? (
                                         <p className="text-capitalize mb-0" disabled>In Cart</p>)
                                         : (<i className="fas fa-cart-plus" />)
@@ -39,7 +42,7 @@ class Product extends Component {
                         </h5>
                     </div>
                 </div>
-            </ProductWrapper>
+            </ProductWrapper >
         );
     }
 }
